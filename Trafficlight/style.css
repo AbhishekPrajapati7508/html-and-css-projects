@@ -1,0 +1,130 @@
+* {
+    margin: 0,50px,0,50;
+    padding: 0;
+  }
+  .main{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    margin-right: 20%;
+    justify-content: space-evenly;
+  }
+
+  .light{
+    margin-left: 50px;
+    height: 500px;
+    background-color: grey;
+    width:200px;
+    border:2px solid black;
+  }
+  .lighting-option{
+    height: auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 15 15 0 15;
+
+    border: 2px solid black;
+
+  }
+  .red-light, .green-light, .yellow-light{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  .red-light{
+    background-color:red;
+  }
+  .green-light{
+    background-color: rgb(22, 229, 22);
+  }
+  .yellow-light{
+    background-color: yellow;
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.all { background-color: purple; }
+.reset { background-color: gray; }
+.red { background-color: red; }
+.yellow { background-color: yellow; }
+.green { background-color: green; }
+
+/* Hide radio inputs */
+input[type="radio"] {
+    display: none;
+}
+
+/* Change button color when checked */
+input[type="radio"]:checked + label {
+    opacity: 0.5; /* Dim the color */
+}
+
+/* Adjust lights based on selected radio button */
+input#all:checked ~ .light .red-light,
+input#all:checked ~ .light .yellow-light,
+input#all:checked ~ .light .green-light {
+    background-color: rgb(255, 0, 0);
+}
+
+input#reset:checked ~ .light .red-light,
+input#reset:checked ~ .light .yellow-light,
+input#reset:checked ~ .light .green-light {
+    background-color: #333;
+}
+
+input#red:checked ~ .light .red-light,
+input#yellow:checked ~ .light .yellow-light,
+input#green:checked ~ .light .green-light {
+    background-color: inherit;
+}
+/* Adjust opacity of lights based on selected radio button */
+input#all:checked ~ .light .red-light,
+input#all:checked ~ .light .yellow-light,
+input#all:checked ~ .light.green-light {
+    opacity: 1; /* Highlight when "All" is checked */
+}
+
+input#reset:checked ~ .light .red-light,
+input#reset:checked ~ .light .yellow-light,
+input#reset:checked ~ .light .green-light {
+    opacity: 1; /* Dim when "Reset" is checked */
+}
+
+input#red:checked ~ .light.red-light {
+    opacity: 1; /* Highlight when "Red" is checked */
+}
+
+input#yellow:checked ~ .light .yellow-light {
+    opacity: 1; /* Highlight when "Yellow" is checked */
+}
+
+input#green:checked ~ .light .green-light {
+    opacity: 1; /* Highlight when "Green" is checked */
+}
+
+/* Default dimmed state
+.light .red-light,
+.light .yellow-light,
+.light .green-light {
+    opacity: 0.5; /* Dim by default */
+
+
+.heading{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
